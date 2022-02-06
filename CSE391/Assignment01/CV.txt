@@ -1,0 +1,57 @@
+﻿Naoshin Anzum Hridi
+Dhaka, Bangladesh
+Email: naoshin.anzum.hridi@g.bracu.ac.bd
+LinkedIn: inkedin.com/in/naoshin-anzum-b4b3b5175
+GitHub: https://github.com/Naoshin2111
+
+
+I am now pursuing my bachelor’s in Computer Science and Engineering. I am interested in Web Development and currently learning to be a web developer. I am a learner and I work hard to do well in it. I also have another enthusiasm that is content writing. I also have experience in teaching.
+
+
+Work Experience:
+Web Content Writer (CravinG MIND)
+Duration: Feb 2021 - May 2021 (4 months)
+
+
+Education: 
+Bachelors of Computer Science and Engineering 
+May 2018- September 2022.  
+99 credits (out of 136) completed CGPA: 3.69 (out of 4 scales) 
+BRAC University, Dhaka, Bangladesh 
+
+
+Higher Secondary School Certificate in 2017. 
+GPA 5 (out of 5)
+From Viqarunnisa Noon School & College
+Secondary School Certificate in 2015.
+From Viqarunnisa Noon School & College.
+GPA 5 (out of 5)
+
+
+Development Skill: 
+Programming Languages: PHP, Javascript, Java, Python
+Frameworks: Laravel, Bootstrap, Spring Boot 
+Database: MySql 
+
+
+Platform and Misc:
+Problem Solving Platform: CodeForces 
+IDE: Visual Studio Code, IntelliJ IDEA, Pycharm 
+Other Skills: Microsoft Word, Excel, Powerpoint
+
+
+Projects:
+1. MVC PATTERN TECHNOLOGY PROJECT WITH LARAVEL
+2. MVC PATTERN TECHNOLOGY PROJECT WITH SPRING BOOT
+
+
+
+
+Accomplishments: 
+● Used Many to Many, One to Many Relationships 
+● Admin Panel 
+● Separate User Panel 
+● Authentication 
+● Session Implementation 
+● JPA 
+● Used Object Oriented concepts to create the project
