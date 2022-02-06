@@ -1,0 +1,137 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    height: 100%;
+}
+
+.contactform {
+
+    background-image: linear-gradient(to top, rgba(35, 34, 37, 0.466) 0%, rgba(46, 43, 45, 0.445) 100%), url(https://images.unsplash.com/photo-1524650359799-842906ca1c06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.con{
+    text-align: center;
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 300;
+
+}
+
+.contact {
+    color: white;
+}
+
+
+p {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 40px 0;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .group {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: black;
+    font-size: 1em;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+    color: black;
+
+}
+
+label {
+    color: black;
+    font-size: 1em;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 0.9em;
+    color: rgb(3, 44, 51);
+}
+
+.ctf {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.ctf::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.ctf::before {
+    width: 100%;
+
+}
+
+button {
+    background: rgb(3, 44, 51);
+    display: block;
+    border: none;
+    width: 40%;
+    margin: auto;
+    color: white;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+
+
+
+
