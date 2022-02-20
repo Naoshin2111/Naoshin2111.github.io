@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/part02.css" rel="stylesheet">
+        <script src="js/calculator.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="up">
+                    <p><span class="header">Assignment </span>02</p>
+                </div>
+            </nav>
+                <div class="down">
+                    <ul>
+                        <li class="list" onclick="click1(event)"><a href="index.html">Quote</a></li>
+                        <li class="list" onclick="click1(event)"><a href="hero_converter.html">Hero Converter</a></li>
+                        <li class="list" onclick="click1(event)"><a href="#">Calculator</a></li>
+                        <li class="list" onclick="click1(event)"><a href="part03.html">Magic</a></li>                       
+                    </ul>
+                </div>
+        </header>
+
+        <div class="mid-container" onclick="inputs()">
+
+            <div class="contents">
+                <div class="calculator">
+                    <div class="content-labels">
+                        <p>Input Series Number:</p>
+                        <p>Min:</p>
+                        <p>Max:</p>
+                        <p>Sum:</p>
+                        <p>Average:</p>
+                        <p>Reverse Order:</p>
+                    </div>
+                    <div class="content-items">
+                        <input id="txt-input" type="text" placeholder="Enter coma separated numbers" onkeydown="txtInputKeyDown(event)">
+                        <p id="txt-min">0</p>
+                        <p id="txt-max">0</p>
+                        <p id="txt-sum">0</p>
+                        <p id="txt-avg">0</p>
+                        <p id="txt-reverse">0</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container_full footer_bg">
+            <div class="container">
+                <footer>
+                  <h1> – Thanks for visiting! – </h1>
+                    <p>### College Road, Malibagh, Dhaka-12**, Bangladesh </p>
+                    <p>Phone: +880-********** | Email: naoshin@gmail.com</p>
+                    <p>Copyright &copy; | 2022 Assignment02</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
