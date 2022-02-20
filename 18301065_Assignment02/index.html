@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="./quote.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="up">
+                    <p><span class="header">Assignment</span>02</p>
+                </div>
+            </nav>
+                <div class="down">
+                    <ul>
+                        <li class="list" onclick="click1(event)"><a href="#">Quote</a></li>
+                        <li class="list" onclick="click1(event)"><a href="hero_converter.html">Hero Converter</a></li>
+                        <li class="list" onclick="click1(event)"><a href="part02.html">Calculator</a></li>
+                        <li class="list" onclick="click1(event)"><a href="part03.html">Magic</a></li>                       
+                    </ul>
+                </div>
+        </header>
+
+        <div class="mid-container">
+
+            <div class="center_container">
+                <div class="contents">
+                    <div class="fortune-container">
+                        <p class="fortune" id="fortune" onclick="randomOneQuote()">This is your fortune</p>
+                        <div class="fortune-colors">
+                            <button type="button" style="background: rgb(108, 212, 204)" onclick="changeQuoteTextColor('DarkCyan')">Aqua</button>
+                            <button type="button" style="background: rgb(202, 160, 104)" onclick="changeQuoteTextColor('BurlyWood')">Wood</button>
+                            <button type="button" style="background: rgb(236, 172, 212)" onclick="changeQuoteTextColor('pink')">Pink</button>
+                            <button type="button" style="background: rgb(113, 128, 196)" onclick="changeQuoteTextColor('DarkSlateBlue')">Violet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container_full footer_bg">
+            <div class="container">
+                <footer>
+                  <h1> – Thanks for visiting! – </h1>
+                    <p>### College Road, Malibagh, Dhaka-12**, Bangladesh </p>
+                    <p>Phone: +880-********** | Email: naoshin@gmail.com</p>
+                    <p>Copyright &copy; | 2022 Assignment02</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
