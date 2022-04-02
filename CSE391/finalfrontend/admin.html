@@ -72,6 +72,216 @@
     
 
       <!-- navbar ends -->
+<!--   admin control   -->
+    <section>
+    <div class="container admin">
+        <h1 class="text-center">Welcome to Admin Panel!</h1>
+        <div th:if="${session.msg}" th:replace="message::message1"></div>
+        <div class="row mt-3">
+
+            <div class="col-md-4">
+
+
+                <div class="card text-center">
+                    <div class="body">
+                        <div class="container">
+                            <img style="width: 37%" class="img-fluid rounded-circle"
+                                 th:src="@{/images/users.png}" alt="users">
+
+                        </div>
+                        <h1 th:text="${allProduct}">123</h1>
+                        <h1 class="text-muted">Users</h1>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <div class="card text-center">
+                    <div class="body">
+                        <div class="container">
+                            <img style="width:30%" class="img-fluid rounded-circle"
+                                 th:src="@{/images/category.png}" alt="users">
+
+                        </div>
+                        <h1 th:text="${allCategory}">123</h1>
+                        <h1 class="text-muted">Categories</h1>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-4">
+
+
+                <div class="card text-center">
+                    <div class="body">
+                        <div class="container">
+                            <img style="max-width: 125px" class="img-fluid rounded-circle"
+                                 th:src="@{/images/product.jfif}"  alt="users">
+
+                        </div>
+                        <h1 th:text="${allProduct}">123</h1>
+                        <h1 class="text-muted">Products</h1>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+
+
+                <div class="card" data-bs-toggle="modal" data-bs-target="#add-category-modal">
+                    <div class="card-body text-center">
+                        <div class="container">
+                            <img style="max-width: 125px" class="img-fluid rounded-circle"
+                                 th:src="@{/images/add.png}" alt="users">
+
+                        </div>
+                        <p>Click here to add new categories</p>
+                        <h1 class="text-muted">Add Category</h1>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+
+                <div class="card" data-bs-toggle="modal" data-bs-target="#add-product-modal">
+                    <div class="card-body text-center">
+                        <div class="container">
+                            <img style="max-width: 125px" class="img-fluid rounded-circle"
+                                 th:src="@{/images/add.png}" alt="users">
+
+                        </div>
+                        <p>Add here to add new products</p>
+                        <h1 class="text-muted">Add Product!</h1>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+<!--    <%&#45;&#45;add modal&#45;&#45;%>-->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="add-category-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #795548">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Category Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form th:action="@{/addcategory}" th:method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" th:name="title" placeholder="Enter category title"
+                                   required>
+                        </div>
+                        <div class="form-group mt-1">
+                        <textarea class="form-control" rows="3" placeholder="Enter category description"
+                                  th:name="description" required></textarea>
+                        </div>
+                        <div class="container text-center mt-1">
+                            <button type="submit" class="btn btn-outline-success"> Add Category</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+        </div>
+    </div>
+        </div>
+    </div>
+
+
+<!--    <%&#45;&#45;end modal&#45;&#45;%>-->
+
+
+    <!-- Add product Modal -->
+    <div class="modal fade" id="add-product-modal" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #795548">
+                    <h5 class="modal-title" id="exampleModalLabel1">Add Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form th:action="@{/registerproduct}" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" class="form-control" th:name="name" placeholder="Enter product name" required>
+                        </div>
+                        <div class="form-group mt-1">
+                            <textarea class="form-control" rows="3" placeholder="Enter Product description" th:name="description" required></textarea>
+                        </div>
+                        <div class="form-group mt-1">
+                            <input type="number" class="form-control" th:name="price" placeholder="Enter price of product" required>
+                        </div>
+                        <div class="form-group mt-1">
+                            <input type="number" class="form-control" th:name="discount" placeholder="Enter discount of product" required>
+                        </div>
+                        <div class="form-group mt-1">
+                            <input type="number" class="form-control" th:name="quantity" placeholder="Enter quantity of product" required>
+                        </div>
+
+
+
+                        <div class="form-group mt-1">
+<!--                            <select name="catId" class="form-control">-->
+<!--                                <c:forEach var="row" items="${result.rows}">-->
+<!--                                    <option value="<c:out value="${row.categoryId}"/>"><c:out value="${row.categoryTitle}"/></option>-->
+<!--                                </c:forEach>-->
+<!--                            </select>-->
+
+                            <select  name="categoryId" class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option th:each="category : ${categoryList}" th:value="${category.id}" th:text="${category.title}">null</option>
+                            </select>
+                        </div>
+
+
+
+<!--                        <%&#45;&#45;product file&#45;&#45;%>-->
+                        <div class="form-group mt-1">
+                            <label for="pId" class="d-block"> Select Picture of Product</label>
+                            <input type="file" id="pId" name="Photo" class="form-control-file" required >
+                        </div>
+
+
+                        <div class="container text-center mt-1">
+                            <button type="submit" class="btn btn-outline-success"> Add Product</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!--    <%&#45;&#45;end modal&#45;&#45;%>-->
+</section>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
