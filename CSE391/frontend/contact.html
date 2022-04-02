@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/contact.css" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+
+    <title>CarShop</title>
+  </head>
+  <body>
+      <!-- navbar starts -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Site Logo Here -->
+            <a class="navbar-brand" href="#">AzureAutoMechanic</a>
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileToggle" aria-controls="navbarMobileToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMobileToggle">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="Submenu-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                        </a>
+                        <ul class="dropdown-menu rounded-3" aria-labelledby="Submenu-Dropdown">
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="buy.html">Buy a Car</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Services Three</a></li>
+                            <li><a class="dropdown-item" href="#">Services Four</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+    
+                <!-- Right Side -->
+                <div class="btn-group float-end">
+                    <button class="btn btn-light ms-3"><a href="login.html">Login</a></button>
+                    <button class="btn btn-light ms-3"><a href="signup.html">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+      <!-- navbar ends -->
+
+      <!-- contact -->
+      <div id="contact-form">
+        <div>
+            <h1>Nice to Meet You!</h1> 
+            <h4>Have a question or just want to get in touch? Let's chat.</h4> 
+        </div>
+            <p id="failure">Oopsie...message not sent.</p>  
+            <p id="success">Your message was sent successfully. Thank you!</p>
+    
+               <form method="post" action="/">
+                <div>
+                  <label for="name">
+                      <span class="required">Name: *</span> 
+                      <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+                  </label> 
+                </div>
+                <div>
+                  <label for="email">
+                      <span class="required">Email: *</span>
+                      <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
+                  </label>  
+                </div>
+                <div>		          
+                  <label for="subject">
+                  <span>Subject: </span>
+                      <select id="subject" name="subject" tabindex="4">   
+                         <option value="hello">Product Price Question</option>
+                         <option value="quote">Where are my dragons?!</option>  
+                         <option value="general">- Valar Morghulis - </option>
+                      </select>
+                  </label>
+                </div>
+                <div>		          
+                  <label for="message">
+                      <span class="required">Message: *</span> 
+                      <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
+                  </label>  
+                </div>
+                <div>		           
+                  <button name="submit" type="submit" id="submit" >SEND</button> 
+                </div>
+               </form>
+    
+        </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
