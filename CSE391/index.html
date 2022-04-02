@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+
+    <title>CarShop</title>
+  </head>
+
+  <body>
+      <!-- navbar starts -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Site Logo Here -->
+            <a class="navbar-brand" href="#">AzureAutoMechanic</a>
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileToggle" aria-controls="navbarMobileToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMobileToggle">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="Submenu-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                        </a>
+                        <ul class="dropdown-menu rounded-3" aria-labelledby="Submenu-Dropdown">
+                            <li><a class="dropdown-item" href="rent.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="buy.html">Buy a Car</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Services Three</a></li>
+                            <li><a class="dropdown-item" href="#">Services Four</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+    
+                <!-- Right Side -->
+                <div class="btn-group float-end">
+                    <button class="btn btn-light ms-3"><a href="login.html">Login</a></button>
+                    <button class="btn btn-light ms-3"><a href="signup.html">SignUp</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+      <!-- navbar ends -->
+
+      <!-- Banner Section
+<section id="banner">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/17.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Web Development</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.markuptag.com/images/slider-img-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Web Designing</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.markuptag.com/images/slider-img-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>App Development</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</section>
+End Banner Section -->
+
+      <!-- card section -->
+      <section>
+        <div class="row mt-1">
+   <!-- show categories-->
+   
+            <div class="col-md-2 mt-5">
+                <div class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-action active custom-bg" aria-current="true">
+                        All Categories
+                    </a>
+                    <!-- <th:block th:each="category: ${categoryList}"> -->
+                        <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                           class="list-group-item list-group-item-action">Nissan
+                        </a>
+
+                        <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                           class="list-group-item list-group-item-action">MacLaren
+                        </a>
+
+                        <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                           class="list-group-item list-group-item-action">Ferrari
+                        </a>
+
+                        <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                           class="list-group-item list-group-item-action">Honda
+                        </a>
+
+                        <a  th:href= "@{/category(id=${category.id})}" th:text="${category.title}" th:value="${category.id}"
+                           class="list-group-item list-group-item-action">Pagani
+                        </a>
+                    <!-- </th:block> -->
+                </div>
+            </div>
+
+            <!--show products-->
+
+         <div class="col-md-10">
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card-columns">
+
+
+
+
+                        <!-- <th:block th:each="product : ${productList}"> -->
+                            <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                                <div class="container text-center">
+                                    <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                         src="/images/1.jpg"
+                                          alt="product">
+
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${product.name}">Lamborghini Aventedor Tron</h5>
+                                    <p class="card-text" th:text="${product.description}">
+                                    </p>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn custom-bg text-white"
+                                            th:pid="${product.id}" th:pname="${product.name}" th:price="${product.price}"
+                                              onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!-- th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                             Add to Cart</button>
+                                    <button class="btn btn-outline-primary" th:text="${product.price}">275000000</button>
+                                </div>
+                            </div>
+                        <!-- </th:block> -->
+
+
+
+
+                        <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                            <div class="container text-center">
+                                <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                    src="/images/2.jpg"
+                                      alt="product">
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${product.name}">Toyota Supra</h5>
+                                <p class="card-text" th:text="${product.description}">
+                                </p>
+                            </div>
+                            <div class="footer">
+                                <button class="btn custom-bg text-white"
+                                        th:pid="${product.id}" th:pname="${product.name}" th:price="${product.price}"
+                                          onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!-- th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                         Add to Cart</button>
+                                <button class="btn btn-outline-primary" th:text="${product.price}">18500000</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                            <div class="container text-center">
+                                <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                     src="/images/3.jpg"
+                                      alt="product">
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${product.name}">Jaguar</h5>
+                                <p class="card-text" th:text="${product.description}">
+                                </p>
+                            </div>
+                            <div class="footer">
+                                <button class="btn custom-bg text-white"
+                                        th:pid="${product.id}" th:pname="${product.name}" th:price="${product.price}"
+                                          onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!-- th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                         Add to Cart</button>
+                                <button class="btn btn-outline-primary" th:text="${product.price}">15000000</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                            <div class="container text-center">
+                                <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                        src="/images/4.jpg"
+                                      alt="product">
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${product.name}">Ford Mustang gt</h5>
+                                <p class="card-text" th:text="${product.description}">
+                                </p>
+                            </div>
+                            <div class="footer">
+                                <button class="btn custom-bg text-white"
+                                        th:pid="${product.id}" th:pname="${product.name}" th:price="${product.price}"
+                                          onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!-- th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                         Add to Cart</button>
+                                <button class="btn btn-outline-primary" th:text="${product.price}">35000000</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="card d-inline-flex" style="margin: 1%;width: 30%">
+                            <div class="container text-center">
+                                <img  class="card-img-top m-2" style="max-height: 200px;max-width: 100%;width: auto"
+                                      src="/images/5.jpg"
+                                      alt="product">
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${product.name}">Lycan HyperSport</h5>
+                                <p class="card-text" th:text="${product.description}">
+                                </p>
+                            </div>
+                            <div class="footer">
+                                <button class="btn custom-bg text-white"
+                                        th:pid="${product.id}" th:pname="${product.name}" th:price="${product.price}"
+                                          onclick="addToCart(this.getAttribute('pid'),this.getAttribute('pname'),this.getAttribute('price'))">
+<!-- th:onclick="'addToCart('+${product.id}+','+${product.name}+','+${product.price}+')'"-->
+                                         Add to Cart</button>
+                                <button class="btn btn-outline-primary" th:text="${product.price}">700000000</button>
+                            </div>
+                        </div>
+
+
+                        
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
